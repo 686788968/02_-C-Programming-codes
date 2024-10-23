@@ -1,24 +1,30 @@
+// as usual we print length of string using strlen function of string but 
+// in this program we are not using it 
+// instead we made a user defined function (length) to do the opration for us.
 
 #include <stdio.h>
-#include <string.h>
 
-struct vector
-{
-    int i;
-    int j;
-};
-struct vector sumVector(struct vector v1, struct vector v2){
-struct vector v3 = {v1.i + v2.i, v1.j + v2.j};
-return v3 ;
-};
 
-int main()
-{
+int length(char str[]){
+        int i=0;  // initialising i 
+        int count=0;
+        char c=str[i];
 
-    struct vector v1 = {2, 5};
-    struct vector v2 = {4, 8};
-    struct vector v3 =sumVector(v1,v2);
-    printf("the vector is %di and %dj \n",v3.i,v3.j);
+        while(c!='\0'){    // while c is not a null character perfor the following 
+            c=str[i];
+            i++;
+        }
+        count=i-1;
+        printf("Length is %d ",count);   // as in i it takes null as a character so i-1 gives actual number of characters.
+        //return count;
+        //printf("Length:%d",i);   // printing the i means itrations because as much itrations are there length is equal to it
+}
 
-    return 0;
+int main(){
+
+    	char str[]="harry bhai";
+length(str);     // calling the function length
+
+
+   return 0;
 }

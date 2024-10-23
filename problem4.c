@@ -1,22 +1,21 @@
-//defining a two dimensional vector using structure 
-// as there are two axis x-axis,y-axis , represented i for x and j for y -- > 2i^ ,3j^ (3 j cap );
+// Decription of the problem3 result 
+// simply decreasing the ascai value by one to cut out the increption of +1 as +1 + -1 = 0
 
 #include <stdio.h>
 #include <string.h>
 
-
-struct vector {
-    int i;
-    int j;
-};
-
 int main(){
 
-    	struct vector V = {2,5};
-        
+    	
+    char str[]="nz!obnf!jt!spiju!eftixbm!kbbu";
+    for (int i=0;i<strlen(str);i++){
+        str[i]=str[i]-1;
 
-        printf ("the vector is %d i^ ,%d j^",V.i ,V.j);
+    }
+printf("the string is:=> %s\n",str);
+
 
 
    return 0;
 }
+        
